@@ -1,0 +1,131 @@
+/* General Reset */
+
+body{
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #dadada;
+    background: #121824;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: #121824;
+    color: #dadada;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+header .header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 2s ease;
+}
+
+header .header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 2.5s ease;
+}
+
+header button {
+    padding: 0.7rem 1.5rem;
+    background: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    animation: fadeInUp 3s ease;
+}
+
+header button:hover {
+    background: #e65500;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main Sections */
+main {
+    padding: 2rem 1rem;
+    flex: 1;
+}
+
+#instruments {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    scroll-behavior: smooth;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    text-align: center;
+    width: 150px;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #121824;
+    color: #dadada;
+    padding: 1rem 0;
+}
